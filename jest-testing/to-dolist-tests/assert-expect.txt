@@ -1,0 +1,95 @@
+-----------------------------------------------------------
+size
+test('todolist has a size of 3', () => {
+  expect(list.size()).toBe(3);
+});
+Remember to put this test in the describe callback. As you read the solutions, keep the SEAT sequence in mind. S is "set up," and is handled by beforeEach method, which gets executed before every test. E is "execute," which is list.size() in this problem. A is "assert," which is the expect().toBe call. T is "teardown:" we don't have a teardown.
+
+The execution step can be a simple expression, as shown above, but it can also be a separate line of code or even several lines of code.
+
+toArray
+
+-----------------------------------------------------------
+first
+
+-----------------------------------------------------------
+last
+
+-----------------------------------------------------------
+shift
+
+Hint: TodoList#shift removes and returns the first item in the list. You probably want a separate assertion for each behavior.
+
+-----------------------------------------------------------
+pop
+
+Hint: similar to shift, except pop removes and returns the last item.
+
+-----------------------------------------------------------
+isDone
+
+This method returns true when all items in the list are done, false otherwise.
+
+-----------------------------------------------------------
+add
+
+Write a test that verifies that a TypeError occurs when you attempt to add an item to the list that isn't a Todo object.
+
+-----------------------------------------------------------
+itemAt
+
+Hint: remember that this method should raise ReferenceError if we specify an index with no element.
+
+-----------------------------------------------------------
+markDoneAt
+
+Hint: this method should also raise ReferenceError if we specify an index with no element.
+
+-----------------------------------------------------------
+markUndoneAt
+
+-----------------------------------------------------------
+markAllDone
+
+-----------------------------------------------------------
+removeAt
+
+Hint: this method raises ReferenceError if the argument does not identify a todo item.
+
+-----------------------------------------------------------
+toString (part 1)
+
+This problem and the next few are a bit tricky, so we'll show the code for this one first. In this test, we want to test a multiline string since that's what toString returns. The easiest way to do that is to capture what we expect in a variable, then compare it to the method's return value.
+
+test('toString returns string representation of the list', () => {
+  let string = `---- Today's Todos ----
+  [ ] Buy milk
+  [ ] Clean room
+  [ ] Go to the gym`;
+
+  expect(list.toString()).toBe(string);
+});
+As you can see, the template string looks awkward and has funky indentation. That's unavoidable; adding indentation introduces unnecessary spaces to our string, and the test would fail without some additional manipulation.
+
+toString (part 2)
+
+Write another test for toString. This time, verify that it returns the correct string when one of the todos is done.
+
+-----------------------------------------------------------
+toString (part 3)
+
+Write one more test for toString that checks for the correct string when all todos are done.
+
+-----------------------------------------------------------
+forEach
+
+The point of this test is to verify that forEach iterates over the elements in list. There are many ways to do that, so pick something simple to assert.
+
+-----------------------------------------------------------
+filter
+
+Hint: remember that filter returns a new TodoList object.
+
+-----------------------------------------------------------
+That's it! Can you think of any other tests or assertions to add? You can always beef up your tests!
+

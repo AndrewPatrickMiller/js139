@@ -1,0 +1,9 @@
+Create a file that exports a class named car. The car class 
+creates instances that have a property for wheels that returns 
+the number four.
+
+Import the class into a jest file.
+Right two tests for the car class one passing 
+test and one failing test.
+
+Then skip over the failing test using two sepearte syntaxes.
