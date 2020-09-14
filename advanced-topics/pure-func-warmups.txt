@@ -1,0 +1,58 @@
+What side effects are present in the foo function in the following code?
+
+const bar = 42;
+let qux = [1, 2, 3];
+let baz = 3;
+
+function foo(arr) {
+  let value = arr.pop();
+  console.log(`popped ${value} from the array`);
+  return value + bar + baz;
+}
+
+foo(qux);
+
+SOLUTION
+
+The function modifies the array passed as an argument.
+The function writes something to the console.
+The function uses the non-constant value of baz.
+
+
+------------------------------------------------------------------
+
+Which of the following functions are pure functions?
+
+Function 1
+function sum(a, b) {
+  console.log(a + b);
+  return a + b;
+}
+Function 2
+function sum(a, b) {
+  a + b;
+}
+Function 3
+function sum(a, b) {
+  return a + b;
+}
+Function 4
+function sum(a, b) {
+  return a + b + Math.random();
+}
+Function 5
+function sum(a, b) {
+  return 3.1415;
+}
+
+
+SOLUTION
+
+Only function 3 is a pure function: it returns a useful value, has no side effects, and it always returns the same value given the same pair of arguments. The remaining functions are impure:
+
+Function 1 logs something to the console. It has a side effect.
+Function 2 does not return a useful value. undefined is not considered a useful value unless it is dependent on the arguments.
+Function 4 uses the random number generator, so it has a side effect.
+Function 5 returns a seemingly useful value, but it isn't dependent on the function arguments.
+
+---------------------------------------------------------------------------------------------
