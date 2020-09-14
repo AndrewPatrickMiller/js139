@@ -29,4 +29,4 @@ class Todo {
 Todo.DONE_MARKER = "X";
 Todo.UNDONE_MARKER = " ";
 
-module.exports = Todo;
+module.exports = Todo;  

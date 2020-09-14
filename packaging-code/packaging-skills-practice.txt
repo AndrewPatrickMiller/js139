@@ -1,0 +1,4 @@
+Using babel transpile ES 6 ES5.
+
+-----------------------------------------------------------------------
+Write a note and package manager script that automatically trans piles ES six to ES five.

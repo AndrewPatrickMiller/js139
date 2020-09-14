@@ -58,7 +58,7 @@ class TodoList {
     this.todos = [];
   }
   
-  addTodo (toDo) {
+  addTodo(toDo) {
     if (!(toDo instanceof Todo)) {
       throw new TypeError('The toDo is not of type Todo.');
     }
@@ -113,10 +113,6 @@ class TodoList {
 }
 
 let myTodoList = new TodoList("Andy's ToDos");
-myTodoList.addTodo(new Todo('do tests'));
-myTodoList.addTodo(new Todo('do tests'));
-myTodoList.addTodo(new Todo('do tests'));
-myTodoList.addTodo(new Todo('do tests'));
-console.log(myTodoList.toString());
-
+myTodoList.addTodo(1);
+myTodoList.addTodo(new Todo('eat'));
 

@@ -1,0 +1,19 @@
+Set up the project directory.
+
+The node modules folder should be in the .gitignore file
+
+
+
+There should be a directory called Lib and a directory called test.
+------------------------------------------------------------
+Create a package.JSON file and a package-lock.JSON
+
+Practice installing NPM packages locally and globally.
+
+Practice adding and removing development dependencies and dependencies.
+
+Practice executing a package locally and a package globally. using npx
+
+------------------------------------------------------------
+
+Practice publishing a package as a NPM

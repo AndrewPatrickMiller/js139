@@ -10,4 +10,4 @@ expect
 
 (matcher) example tobe()
 
-afterEAch
+afterEach
